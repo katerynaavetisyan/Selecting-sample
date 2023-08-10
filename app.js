@@ -1,8 +1,6 @@
-function calculateDogAge(age) {
-    var dogYears = 7 * age;
-    console.log("Your doggie is " + dogYears + " years old in dog years!");
+function calcGeometry(radius) {
+    var circumference = Math.PI * 2 * radius;
+    console.log("The circumference is " + circumference);
+    var area = Math.PI * radius * radius;
+    console.log("The area is " + area);
 }
-
-calculateDogAge(1);
-calculateDogAge(0.5);
-calculateDogAge(12);
