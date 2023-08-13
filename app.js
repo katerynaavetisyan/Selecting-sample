@@ -5,6 +5,3 @@ function calculateSupply(age, numPerDay) {
     console.log(message);
 }
 
-calculateSupply(28, 36);
-calculateSupply(28, 2.5);
-calculateSupply(28, 400);
