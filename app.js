@@ -1,2 +1,1 @@
-console.log(document.querySelector('h1'));
-console.log(document.querySelector('p').innerText);
+const span = document.querySelector('span').innerText = 'Disgusting';
