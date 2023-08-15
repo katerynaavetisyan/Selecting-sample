@@ -1,5 +1,5 @@
-function thinking(family, me) {
-    let future = 'My lastname is ' + family + ' and my firstname is ' + me
-    console.log(future);
+function celsiusToFahrenheit(celsius) {
+    let celsiusInF = (celsius * 9) / 5 + 32;
+    console.log(celsius + '°C is ' + celsiusInF + '°F');
 }
-thinking('Avetisyan', 'Katya')
+celsiusToFahrenheit(12)
