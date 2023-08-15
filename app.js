@@ -1,5 +1,5 @@
-function celsiusToFahrenheit(celsius) {
-    let celsiusInF = (celsius * 9) / 5 + 32;
-    console.log(celsius + '°C is ' + celsiusInF + '°F');
+const allLinks = document.querySelectorAll('a')
+
+for (let link of allLinks) {
+    link.innerText = 'I am a link! '
 }
-celsiusToFahrenheit(12)
