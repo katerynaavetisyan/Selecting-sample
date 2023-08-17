@@ -1,3 +1,3 @@
-
-
-document.querySelector('h1').innerText = '<i> funny </i>'
+const eggImg = document.querySelector('img');
+eggImg.src = 'https://devsprouthosting.com/images/chicken.jpg';
+eggImg.alt = 'chicken';
