@@ -1,4 +1,4 @@
 function alphabet_order(str) {
     return str.split('').sort().join('');
 }
-console.log(alphabet_order("Glory to Ukraine"));
+console.log(alphabet_order("love"));
