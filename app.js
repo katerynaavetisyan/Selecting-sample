@@ -1,14 +1,14 @@
-// function that accepts a string as a parameter and 
-// converts the first letter of each word into upper case.
+// function that accepts a string as a parameter and finds the longest word within the string.
 
-function uppercase(str) {
-    let array1 = str.split(' ');
-    let newarray1 = [];
+function find_longest_word(str) {
+    let array1 = str.match(/\w[a-z]{0,}/gi);
+    let result = array1[0];
 
-    for (let x = 0; x < array1.length; x++) {
-        newarray1.push(array1[x].charAt(0).toUpperCase()
-            + array1[x].slice(1));
+    for (let x = 1; x < array1.length; x++) {
+        if (result.length < array1[x].length) {
+            result = array1[x];
+        }
     }
-    return newarray1.join(' ');
+    return result;
 }
-console.log(uppercase("the quick brown fox"));
+console.log(find_longest_word('Adventures are healthy and fun!'));
