@@ -1,36 +1,24 @@
-function check_Palindrome(str_entry) {
-    // Change the string into lower case and remove  all non-alphanumeric characters
-    var cstr = str_entry.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '');
-    var ccount = 0;
-    // Check whether the string is empty or not
-    if (cstr === "") {
-        console.log("Nothing found!");
-        return false;
+function substrings(str1) {
+    let array1 = [];
+    for (let x = 0, y = 1; x < str1.length; x++, y++) {
+        array1[x] = str1.substring(x, y);
     }
-    // Check if the length of the string is even or odd 
-    if ((cstr.length) % 2 === 0) {
-        ccount = (cstr.length) / 2;
-    } else {
-        // If the length of the string is 1 then it becomes a palindrome
-        if (cstr.length === 1) {
-            console.log("Entry is a palindrome.");
-            return true;
-        } else {
-            // If the length of the string is odd ignore middle character
-            ccount = (cstr.length - 1) / 2;
+    let combi = [];
+    let temp = "";
+    let slent = Math.pow(2, array1.length);
+
+    for (let i = 0; i < slent; i++) {
+        temp = "";
+        for (let j = 0; j < array1.length; j++) {
+            if ((i & Math.pow(2, j))) {
+                temp += array1[j];
+            }
+        }
+        if (temp !== "") {
+            combi.push(temp);
         }
     }
-    // Loop through to check the first character to the last character and then move next
-    for (var x = 0; x < ccount; x++) {
-        // Compare characters and drop them if they do not match 
-        if (cstr[x] != cstr.slice(-1 - x)[0]) {
-            console.log("Entry is not a palindrome.");
-            return false;
-        }
-    }
-    console.log("The entry is a palindrome.");
-    return true;
+    console.log(combi.join("\n"));
 }
-check_Palindrome('madam');
-check_Palindrome('nursesrun');
-check_Palindrome('fox');
+
+substrings("dog");
