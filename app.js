@@ -1,6 +1,7 @@
-const image = document.querySelector('img');
-image.style.width = "150px";
-image.style.borderRadius = "50%";
+function myFunction(p1, p2) {
+    return p1 * p2
+}
 
-const container = document.querySelector("#container");
-container.style.textAlign = "center"
+let result = myFunction(p1, p2)
+
+console.log(myFunction(5, 4));
