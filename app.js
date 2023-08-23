@@ -1,7 +1,3 @@
-function myFunction(p1, p2) {
-    return p1 * p2
-}
-
-let result = myFunction(p1, p2)
-
-console.log(myFunction(5, 4));
+const eggImg = document.querySelector('img');
+eggImg.src = 'https://devsprouthosting.com/images/chicken.jpg';
+eggImg.alt = 'chicken';
