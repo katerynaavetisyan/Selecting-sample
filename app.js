@@ -6,3 +6,4 @@ const square = {
         return side * 4;
     }
 }
+console.log(square.area(50))
