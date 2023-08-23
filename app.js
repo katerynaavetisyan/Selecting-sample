@@ -1,9 +1,10 @@
-const square = {
-    area: function (side) {
-        return side * side;
-    },
-    perimeter: function (side) {
-        return side * 4;
+const cat = {
+    name: 'Blake',
+    color: 'Grey',
+    breed: 'dvornyaga',
+    meow() {
+        console.log(`${this.name} says meowwwww`);
     }
 }
-console.log(square.area(50))
+
+console.log(cat.meow());
