@@ -1,9 +1,6 @@
-function addStudent(id, refreshCallback) {
-    refreshCallback();
+const square = function (x) {
+    return x * x
 }
 
-function refreshStudentList() {
-    console.log('Hello');
-}
 
-addStudent(1, refreshStudentList);
+console.log(square(5));
