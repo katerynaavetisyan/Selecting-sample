@@ -1,6 +1,8 @@
-const square = function (x) {
-    return x * x
+const square = {
+    area: function (side) {
+        return side * side;
+    },
+    perimeter: function (side) {
+        return side * 4;
+    }
 }
-
-
-console.log(square(5));
