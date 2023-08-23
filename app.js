@@ -1,5 +1,9 @@
-function abc() {
-    console.log(arguments.callee.name);
+function addStudent(id, refreshCallback) {
+    refreshCallback();
 }
 
-abc();
+function refreshStudentList() {
+    console.log('Hello');
+}
+
+addStudent(1, refreshStudentList);
