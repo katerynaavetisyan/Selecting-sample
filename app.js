@@ -1,16 +1,15 @@
-function is_perfect(number) {
-    var temp = 0;
-    for (var i = 1; i <= number / 2; i++) {
-        if (number % i === 0) {
-            temp += i;
-        }
-    }
+function factors(n) {
+    var num_factors = [], i;
 
-    if (temp === number && temp !== 0) {
-        console.log("It is a perfect number.");
-    }
-    else {
-        console.log("It is not a perfect number.");
-    }
+    for (i = 1; i <= Math.floor(Math.sqrt(n)); i += 1)
+        if (n % i === 0) {
+            num_factors.push(i);
+            if (n / i !== i)
+                num_factors.push(n / i);
+        }
+    num_factors.sort(function (x, y) {
+        return x - y;
+    });  // numeric sort
+    return num_factors;
 }
-is_perfect(28); 
+console.log(factors(15));  // [1,3,5,15] 
